@@ -4,7 +4,7 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [text, setText] = useState("");
 
-  const API_URL = "http://localhost:3016/api/todos";
+  const API_URL = `${process.env.NEXT_PUBLIC_API_URL}/api/todos`;
 
   useEffect(() => {
     fetch(API_URL)
